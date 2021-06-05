@@ -1,11 +1,20 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class FollowMouse : MonoBehaviour
 {
-    void Update()
+
+    private Rigidbody2D rb2d;
+
+    private void Start()
     {
-        var targetPosition = (Vector3)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        targetPosition.z = this.transform.position.z;
-        this.transform.position = targetPosition;
+        this.rb2d = GetComponent<Rigidbody2D>();
+    }
+
+    private void FixedUpdate()
+    {
+        var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var diff = mousePosition - transform.position;
+        rb2d.AddForce(diff, ForceMode2D.Impulse);
     }
 }

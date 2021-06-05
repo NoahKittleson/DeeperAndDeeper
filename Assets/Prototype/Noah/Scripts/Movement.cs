@@ -16,7 +16,11 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space)) {
             Debug.Log("I did it!");
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-10,-10);
+            Move(new Vector2(-10, -10), 1);
         }
+    }
+
+    void Move(Vector2 direction, float power) {
+        GetComponent<Rigidbody2D>().velocity = direction * power;
     }
 }

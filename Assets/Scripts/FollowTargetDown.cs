@@ -9,13 +9,15 @@ public class FollowTargetDown : MonoBehaviour
     [SerializeField]
     private float delay = 1f;
 
+    [SerializeField]
+    private float lagDistance = 0f;
+
     void Update()
     {
-        var diff = target.position - this.transform.position;
-        diff.z = 0;
-        diff.x = 0;
-        if (diff.y > 0) diff.y = 0;
-        var translation = diff / delay * Time.deltaTime;
+        var yDiff = target.position.y + lagDistance - this.transform.position.y;
+        if (yDiff > 0) yDiff = 0;
+        var yTranslation = yDiff / delay * Time.deltaTime;
+        var translation = new Vector3(0, yTranslation, 0);
         this.transform.Translate(translation);
     }
 }

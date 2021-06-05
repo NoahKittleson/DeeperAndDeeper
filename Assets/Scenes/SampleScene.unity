@@ -559,8 +559,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4712521375183925933, guid: d5077a914a7f5b146a40d5de6bb4b51d,
         type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4712521375183925933, guid: d5077a914a7f5b146a40d5de6bb4b51d,
+        type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4712521375183925933, guid: d5077a914a7f5b146a40d5de6bb4b51d,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8718520351768602905, guid: d5077a914a7f5b146a40d5de6bb4b51d,
         type: 3}
@@ -568,6 +578,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847,
         type: 3}
+    - target: {fileID: 9221064222098786645, guid: d5077a914a7f5b146a40d5de6bb4b51d,
+        type: 3}
+      propertyPath: scale
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4255994813395204738, guid: d5077a914a7f5b146a40d5de6bb4b51d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d5077a914a7f5b146a40d5de6bb4b51d, type: 3}

@@ -46,5 +46,5 @@ MonoBehaviour:
   size: {x: 8, y: 8}
   backgroundPrefab: {fileID: 7877080868497431222, guid: c1e8a10f4b8f849158976353b62fe1f9,
     type: 3}
-  blouderPrefab: {fileID: 1676881964174309119, guid: 24c30e35882554678b25db997021009c,
+  boulderPrefab: {fileID: 1676881964174309119, guid: 24c30e35882554678b25db997021009c,
     type: 3}

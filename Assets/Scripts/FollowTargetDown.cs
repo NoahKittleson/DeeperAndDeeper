@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCamera : MonoBehaviour
+public class FollowTargetDown : MonoBehaviour
 {
-    public Transform player;
+    public Transform target;
 
     [SerializeField]
     private float delay = 1f;
 
     void Update()
     {
-        var diff = player.position - this.transform.position;
+        var diff = target.position - this.transform.position;
         diff.z = 0;
         diff.x = 0;
         if (diff.y > 0) diff.y = 0;

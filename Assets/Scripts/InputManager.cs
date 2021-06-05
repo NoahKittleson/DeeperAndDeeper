@@ -4,7 +4,7 @@ using UnityEngine.Events;
 [System.Serializable]
 public class MouseUpEvent : UnityEvent<Vector2, float> { }
 
-public class OldInput : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
     public MouseUpEvent onMouseUp;
 

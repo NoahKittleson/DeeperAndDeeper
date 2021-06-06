@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     Vector2 lastVelocity;
     public float scale = 5;
     public float maxTime = 1.5f;
+    public bool alive = true;
 
 
     // Start is called before the first frame update
@@ -35,10 +36,17 @@ public class Movement : MonoBehaviour
     }
 
     public void Move(Vector2 mousePosition, float power) {
-        power = Mathf.Min(power, maxTime);
+        if(alive) {
+            power = Mathf.Min(power, maxTime);
 
-        Vector2 playerPosition = GetComponent<Rigidbody2D>().position;
-        Vector2 direction =  mousePosition - playerPosition;
-        GetComponent<Rigidbody2D>().velocity = direction.normalized * scale * power;
+            Vector2 playerPosition = GetComponent<Rigidbody2D>().position;
+            Vector2 direction =  mousePosition - playerPosition;
+            GetComponent<Rigidbody2D>().velocity = direction.normalized * scale * power;
+        }
+    }
+
+    public void Die(){
+        alive = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 }
